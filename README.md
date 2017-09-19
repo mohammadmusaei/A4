@@ -17,6 +17,27 @@ imports: [
 ```
 
 
+> Components
+
+A4 have a `BaseComponent` that provide common services for other components, `BaseComponent` have two Generic types, First one is component model and second is component service for CRUD and other database interactions.For dynamic injection `BaseComponent` use `Injector` and `ReflectiveInjector` for resolve and create providers and services.When a component extends `BaseComponent` by inheritance component have two property: a model and service.
+
+```typescript
+export class SampleComponent extends BaseComponent<User,UserService> implements OnInit {
+
+  constructor(injector : Injector){
+    super(injector);
+  }
+  onSubmit() : void{
+    this.service.post(this.model);
+  }
+
+  ngOnInit() {
+  }
+
+}
+```
+
+
 # Angular 4 application design pattern
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
