@@ -1,5 +1,5 @@
 
-# Angular4 Design Pattern
+# Angular 4 Design Pattern
 
 **A4** is a design pattern for large scale angular 4 applications that is easy to implement and use.
 
