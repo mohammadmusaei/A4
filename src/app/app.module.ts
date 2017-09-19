@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CellularDirectiveModule  } from '../framework/modules/cellular.directive.module'
+import {FrameworkDirectiveModule} from "../framework/component.module";
+import {FrameworkComponentModule} from "../framework/directive.module";
 
 @NgModule({
   declarations: [
@@ -10,7 +13,11 @@ import { CellularDirectiveModule  } from '../framework/modules/cellular.directiv
   ],
   imports: [
     BrowserModule,
-    CellularDirectiveModule
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([]),
+    FrameworkDirectiveModule,
+    FrameworkComponentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

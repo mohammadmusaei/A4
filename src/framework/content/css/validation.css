@@ -1,0 +1,23 @@
+form input.ng-invalid.ng-touched {
+  border: 1px solid #ef5350;
+  background-color: #ffebee; }
+
+.form-error-msg {
+  padding: 0 3px;
+  background-color: #ffcdd2;
+  color: #ef5350;
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #ef9a9a; }
+
+.form-error-msg > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.form-asterisk {
+  position: relative;
+  color: #ef5350; }
+
+/*# sourceMappingURL=validation.css.map */

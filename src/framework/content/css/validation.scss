@@ -1,0 +1,30 @@
+
+$validation-input-border-color :#ef5350;
+$validation-input-background: #ffebee;
+$validation-message-color :#ef5350;
+
+form input.ng-invalid.ng-touched {
+  border: 1px solid $validation-input-border-color;
+  background-color: $validation-input-background;
+}
+
+.form-error-msg {
+  padding: 0 3px;
+  background-color: #ffcdd2;
+  color: $validation-message-color;
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #ef9a9a;
+}
+
+.form-error-msg > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form-asterisk {
+  position: relative;
+  color: $validation-message-color;
+}
