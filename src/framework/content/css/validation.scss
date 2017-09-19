@@ -1,7 +1,6 @@
-
-$validation-input-border-color :#ef5350;
+$validation-input-border-color: #ef5350;
 $validation-input-background: #ffebee;
-$validation-message-color :#ef5350;
+$validation-message-color: #ef5350;
 
 form input.ng-invalid.ng-touched {
   border: 1px solid $validation-input-border-color;

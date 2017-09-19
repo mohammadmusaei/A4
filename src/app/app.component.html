@@ -1,42 +1,24 @@
 
+
 <div class="container-fluid">
-  <br>
-  <br>
-  <br>
   <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-block">
-          <form class="form-horizontal" [BaseForm]="form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)" novalidate>
-            <div class="form-group form-group-sm">
-              <div class="col-md-12">
-                <label>Name</label>
-                <input type="text" class="form-control" name="name" formControlName="name" />
-              </div>
-            </div>
-            <div class="form-group form-group-sm">
-              <div class="col-md-12">
-                <label>LastName</label>
-                <input type="text" class="form-control" name="lastname" formControlName="lastname" />
-              </div>
-            </div>
-            <div class="form-group form-group-sm">
-              <div class="col-md-12">
-                <label>Age</label>
-                <input type="number" class="form-control" name="age" formControlName="age" />
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-md-12">
-                <button class="btn btn-sm btn-primary" type="submit">SAVE</button>
-                <button class="btn btn-sm btn-default" type="button" (click)="form.reset()">Reset</button>
-              </div>
-            </div>
-          </form>
-        </div>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Angular 4 framework pattern</a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"routerLink="/validation">Validation</a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="col-md-4"></div>
+    </nav>
   </div>
 </div>
+
+<router-outlet></router-outlet>

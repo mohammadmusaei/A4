@@ -10,7 +10,7 @@ import { DefaultUrls } from '../model/enums';
 import { IResponse } from '../model/interfaces';
 
 @Injectable()
-export abstract class NoeDataService<T> {
+export abstract class BaseDataService<T> {
 
   configuration: DataServiceConfiguration;
   protected http: HttpService;
@@ -23,7 +23,7 @@ export abstract class NoeDataService<T> {
     }
   }
 
-  protected setConfiguration(module: string, controller: string): NoeDataService<T> {
+  protected setConfiguration(module: string, controller: string): BaseDataService<T> {
     this.configuration = new DataServiceConfiguration(module, controller);
     return this;
   }
