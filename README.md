@@ -1,3 +1,9 @@
+
+#Angular4 design pattern
+
+**A4** is a design pattern for large scale angular 4 applications that is easy to implement and use.
+
+
 # Angular 4 application design pattern
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
