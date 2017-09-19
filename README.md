@@ -3,7 +3,7 @@
 
 **A4** is a design pattern for large scale angular 4 applications that is easy to implement and use.
 
-**A4** categorize app basics like **_ _ services, directives, ... _ _ ** to seperate parts. ** _ _ components, directives _ _ ** have seperate modules to import in project.
+**A4** categorize app basics like (services, directives,etc) to seperate parts. components and directives have seperate modules to import in project.
 
 ```typescript
 imports: [
