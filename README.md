@@ -49,7 +49,7 @@ A4 have a `JsonpService` that use Angular native http provider for database inte
 ###### BaseDataService
 A4 have a `BaseDataService` that provide common CRUD actions like: (POST,GET,GETALL,...), `BaseDataService` have one Generic type that is the service model.`BaseDataService` use `HttpService` for CRUD.
 
-for example when an app service extends `BaseDataService` then it have all common methods already and could have add more specific methods.
+for example when an app service extends `BaseDataService` then it have all common methods already and could have more specific methods.
 
 ```typescript
 @Injectable()
