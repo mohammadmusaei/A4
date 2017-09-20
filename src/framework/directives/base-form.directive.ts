@@ -14,9 +14,9 @@ export class BaseFormDirective implements AfterViewInit, OnDestroy {
   }
 
   private getStarNode(): HTMLSpanElement {
-    var span = this.renderer.createElement("span");
-    this.renderer.appendChild(span,this.renderer.createText("●"));
-    this.renderer.addClass(span,"form-asterisk");
+    var span = this.renderer.createElement('span');
+    this.renderer.appendChild(span,this.renderer.createText('●'));
+    this.renderer.addClass(span,'form-asterisk');
     return span;
   }
 
@@ -25,11 +25,11 @@ export class BaseFormDirective implements AfterViewInit, OnDestroy {
   }
 
   private translateError(errors : any) : HTMLElement {
-    var ul = this.renderer.createElement("ul");
+    var ul = this.renderer.createElement('ul');
     var message : string = "";
     errors = JSON.parse(errors);
     Object.keys(errors).forEach(error=>{
-      var li = this.renderer.createElement("li");
+      var li = this.renderer.createElement('li');
       li.innerHTML = errors[error];
       this.renderer.appendChild(ul,li);
     });
@@ -47,8 +47,8 @@ export class BaseFormDirective implements AfterViewInit, OnDestroy {
     label && this.renderer.appendChild(label, this.getStarNode());
     this.renderer.appendChild(label, (this.renderer.createText(text)));
     //Create error message div
-    var span = this.renderer.createElement("div");
-    this.renderer.addClass(span,"form-error-msg");
+    var span = this.renderer.createElement('div');
+    this.renderer.addClass(span,'form-error-msg');
     this.renderer.setStyle(span,'display','none');
     this.formChangerSubscriber = this.form.statusChanges.subscribe(() => {
       const text = this.form.controls[control].errors ? JSON.stringify(this.form.controls[control].errors) : null;
@@ -61,8 +61,8 @@ export class BaseFormDirective implements AfterViewInit, OnDestroy {
 
   public ngAfterViewInit(): void {
     var formControls = {};
-    this.el.nativeElement.querySelectorAll("[formControlName]").forEach((elm: HTMLElement) => {
-      var control = elm.getAttribute("formControlName");
+    this.el.nativeElement.querySelectorAll('[formControlName]').forEach((elm: HTMLElement) => {
+      var control = elm.getAttribute('formControlName');
       if ((<any>this.form.controls[control]).required) {
         this.attachRequiredProperties(elm, control);
       }

@@ -1,7 +1,7 @@
 import { Injector, Renderer2, ReflectiveInjector } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 
-import {ExtendedFormControl, ExtendedFormGroup} from "../validations/validations";
+import {ExtendedFormControl, ExtendedFormGroup} from '../validations/validations';
 
 export class BaseComponent<T,U> {
 
@@ -31,7 +31,7 @@ export class BaseComponent<T,U> {
   public registerBeforUnloadEvent(func?: { (): boolean }): BaseComponent<T,U> {
     var renderer = this.injector.get(Renderer2);
     var dirty = this.form.dirty;
-    if (typeof (func) === "function")
+    if (typeof (func) === 'function')
       dirty = dirty && func();
     renderer.listen('window', 'beforeunload', (evt: any): any => {
       if (this.form.dirty) {
@@ -49,7 +49,7 @@ export class BaseComponent<T,U> {
     var injector = ReflectiveInjector.resolveAndCreate([object]);
     var a = injector.get(object);
     return Object.keys(a).filter(name => {
-      return typeof this[name] !== "function"
+      return typeof this[name] !== 'function'
     });
   }
 

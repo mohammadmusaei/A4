@@ -1,10 +1,10 @@
 
-import { Http, RequestOptionsArgs, Response, URLSearchParams } from "@angular/http";
-import { Injector, Injectable } from "@angular/core";
-import { Observable } from "rxjs/Observable";
+import { Http, RequestOptionsArgs, Response, URLSearchParams } from '@angular/http';
+import { Injector, Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { HttpConfiguration } from "../configuration/http.configuration";
+import { HttpConfiguration } from '../configuration/http.configuration';
 
 @Injectable()
 export class HttpService extends HttpConfiguration{

@@ -10,22 +10,22 @@ import {
 export class ExtendedValidators extends Validators {
   static requiredValue(message?: string): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } => {
-      message = message || "Field is required.";
+      message = message || 'Field is required.';
       return (control.value !== undefined && control.value !== '' && control.value !== null) ? null : {message: message};
     };
   }
 
   static regExp(regExp: RegExp, message?: string): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } => {
-      message = message || "Regex text failed.";
+      message = message || 'Regex text failed.';
       return regExp.test(control.value) ? null : {message: message};
     };
   }
 
   static func<T>(func: { (value: T): boolean }, message?: string): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } => {
-      message = message || "Function test failed.";
-      return (typeof (func) === "function" && func(control.value)) ? null : {message: message};
+      message = message || 'Function test failed.';
+      return (typeof (func) === 'function' && func(control.value)) ? null : {message: message};
     };
   }
 }

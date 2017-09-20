@@ -1,5 +1,5 @@
 
-import { Headers, RequestOptionsArgs, ResponseContentType, URLSearchParams } from "@angular/http";
+import { Headers, RequestOptionsArgs, ResponseContentType, URLSearchParams } from '@angular/http';
 
 export class HttpConfiguration {
 
@@ -8,8 +8,8 @@ export class HttpConfiguration {
 
   constructor() {
     this.header = new Headers({
-      "Content-Type": "application/json; charset=utf-8",
-      "X-Requested-With": "XMLHttpRequest"
+      'Content-Type': 'application/json; charset=utf-8',
+      'X-Requested-With': 'XMLHttpRequest'
     });
     this.requestOptionsArgs = {
       responseType: ResponseContentType.Json,

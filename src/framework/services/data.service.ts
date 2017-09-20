@@ -1,7 +1,7 @@
 
 import { Injector, Injectable } from '@angular/core';
 import { URLSearchParams, RequestOptionsArgs } from '@angular/http';
-import { Observable } from "rxjs/Observable";
+import { Observable } from 'rxjs/Observable';
 
 import { HttpService } from '../services/http.service';
 import { JsonpService } from '../services/jsonp.service';
