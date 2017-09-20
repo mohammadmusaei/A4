@@ -15,7 +15,7 @@ export class ValidationExampleComponent extends BaseComponent<User,UserService> 
 
   constructor(injector : Injector){
     super(injector);
-    super.createForm(['name','lastname','age']).registerBeforUnloadEvent(); //create form validation and prevent to close window when form is dirty and touched
+    super.createForm(User).registerBeforUnloadEvent(); //create form validation and prevent to close window when form is dirty and touched
   }
   public setValidations(): void { //overwrite this function to set form validations
     this.formControls['name'].markAsRequired(true).setValidators(Validators.compose([
