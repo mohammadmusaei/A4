@@ -14,7 +14,7 @@ export class BaseComponent<T,U> {
   protected router: Router;
   protected route: ActivatedRoute;
 
-  constructor(protected injector : Injector,service? : U){
+  constructor(protected injector : Injector,service? : any){
     this.model = <T>{};
     this.formControls = {};
     this.injectServices(service);

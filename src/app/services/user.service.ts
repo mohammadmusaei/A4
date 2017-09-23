@@ -7,7 +7,7 @@ import {User} from "../models/user.model";
 export class UserService extends BaseDataService<User>{
 
   constructor(injector : Injector) {
-    super(injector);
+    super(injector,'','user');
   }
 
 }

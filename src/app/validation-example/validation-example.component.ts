@@ -14,7 +14,7 @@ import {UserService} from "../services/user.service";
 export class ValidationExampleComponent extends BaseComponent<User,UserService> implements OnInit {
 
   constructor(injector : Injector){
-    super(injector);
+    super(injector,UserService);
     super.createForm(['name','lastname','age']).registerBeforUnloadEvent(); //create form validation and prevent to close window when form is dirty and touched
     //super.createForm(User).registerBeforUnloadEvent(); //Alternative solution
   }

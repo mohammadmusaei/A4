@@ -18,7 +18,7 @@ export abstract class BaseDataService<T> {
 
   constructor(protected injector: Injector, module?: string, controller?: string) {
     this.injectServices();
-    if (module) {
+    if (module || controller) {
       this.configuration = new DataServiceConfiguration(module, controller);
     }
   }
