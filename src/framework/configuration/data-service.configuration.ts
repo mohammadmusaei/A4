@@ -22,11 +22,11 @@ export class DataServiceConfiguration {
   set controller(controller: string) { this._controller = controller; }
 
   public getUrl(method: string, controller?: string, module?: string): string {
-    return `${this.baseUrl} ${module || this.module}/api/${controller || this.controller}/${method}`;
+    return `${this.baseUrl}${module || this.module}/api/${controller || this.controller}/${method}`;
   }
 
   public getDefaultUrl(url: DefaultUrls, controller?: string, module?: string): string {
-    return `${this.baseUrl} ${module || this.module}/api/${controller || this.controller}/${DefaultUrls[url]}`;
+    return `${this.baseUrl}${module || this.module}/api/${controller || this.controller}/${DefaultUrls[url]}`;
   }
 
 }
